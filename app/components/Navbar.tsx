@@ -8,7 +8,7 @@ type NavbarProps = {
 };
 
 const Navbar = ({ user }: NavbarProps) => {
-    const [navbar, setNavbar] = useState<string | null>("unset");
+    const [navbar, setNavbar] = useState<string | null>("show");
     const [infoModal, setInfoModal] = useState<string | null>(null);
 
     useEffect(() => {
@@ -44,7 +44,7 @@ const Navbar = ({ user }: NavbarProps) => {
 
     return (
         <>
-            <div className="px-4 py-3 fixed top-0 w-full z-80 bg-blackbg bg-opacity-90">
+            {/* <div className="px-4 py-3 fixed top-0 w-full z-80 bg-blackbg bg-opacity-90">
                 <div className="flex justify-between">
                     <Link to="/" className="text-white font-courgette text-3xl font-bold">
                         Wordle Champ
@@ -126,7 +126,7 @@ const Navbar = ({ user }: NavbarProps) => {
                     </ul>
                 </div>
             </div>
-            {infoModal && <InfoModal toggleInfoModal={toggleInfoModal} />}
+            {infoModal && <InfoModal toggleInfoModal={toggleInfoModal} />} */}
         </>
     );
 };

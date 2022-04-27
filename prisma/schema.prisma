@@ -21,3 +21,12 @@ model User {
   country        String
   countryEmoji          String
 }
+
+model Note {
+  id    String @id @default(cuid()) 
+  body  String
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+  
+}
